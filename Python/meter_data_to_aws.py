@@ -8,9 +8,9 @@ def main():
     validate_excel(excel_file)    
 
     # parse the data to a .csv file and save it in the data folder. This way, I can build a small Python integration to upload the csv to Amazon AWS S3.
-    csv_file = excel_file.to_csv('data/generated_meter_data.csv', header=True)
+    csv_file = excel_file.to_csv('data/generated_meter_data.csv', index=False, header=True)
 
-    upload_csv_to_s3(csv_file)
+    upload_csv_to_s3()
 
 def validate_excel(excel_file):
     # Expected values to ensure incoming data has the correct columns
