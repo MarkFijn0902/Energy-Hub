@@ -17,7 +17,8 @@ SKIP_HEADER = 1;
 -- Create an external stage to pull data from S3
 CREATE STAGE RAW_METER_STAGE
 URL = 's3://amazon-s3-enexis-raw-data/raw/'
-STORAGE_INTEGRATION = RAW_METER_INTEGRATION;
+STORAGE_INTEGRATION = RAW_METER_INTEGRATION
+FILE_FORMAT = 'CSV_FORMAT';
 
 -- Be sure to use the correct schema
 USE DATABASE ENERGY_HUB;
@@ -25,5 +26,4 @@ USE SCHEMA TABLES;
 
 -- Copy into command to test the external stage
 COPY INTO ENERGY_HUB.TABLES.RAW_METER_DATA
-    FROM @RAW_METER_STAGE
-    FILE_FORMAT = 'CSV_FORMAT';
+    FROM @RAW_METER_STAGE;
