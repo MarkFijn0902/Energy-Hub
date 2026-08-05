@@ -9,6 +9,7 @@ For this project, I chose to work with views in my staging and business layer, a
 
 ## Architecture
 
+```
 -> Excel to mimic an external system 'sending' data to a webhook
 -> Python to validate excel and upload the transformed CSV file to AWS as a sort of mocked smart-meter
 -> AWS S3 for storage
@@ -17,6 +18,7 @@ For this project, I chose to work with views in my staging and business layer, a
 -> RAW layer to always keep original data
 -> STAGING layer to cleanup values and validate original data's usability
 -> BUSINESS layer to build meaningful views, e.g. how much invalid invalid data was sent
+```
 
 ## Packages and systems
 
