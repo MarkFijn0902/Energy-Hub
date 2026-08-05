@@ -1,11 +1,11 @@
-# Enexis-Energy-Hub
+# Energy-Hub - Smart-Meter proof of concept
 
 Proof-of-concept ELT pipeline for processing smart-meter data using Python, AWS and Snowflake.
 
 ## Goal
 
-The goal of this project is to learn about ELT / ETL pipelines and how a cloud-based data warehouse can ingest data from an external source, validate and transform it to expose usefull data for business operations.
-For this project, I choose to work with views in my staging and business layer, as they will automatically change when new data is added by SnowPipe. Learning and investigating how Matillion works seemed overpowered for my demonstration purposes.
+The goal of this project is to learn about ELT / ETL pipelines and how a cloud-based data warehouse can ingest data from an external source, validate and transform it to expose useful data for business operations.
+For this project, I chose to work with views in my staging and business layer, as they will automatically change when new data is added by SnowPipe. Learning and investigating how Matillion works seemed overkill for my demonstration purposes.
 
 ## Architecture
 
@@ -16,7 +16,7 @@ For this project, I choose to work with views in my staging and business layer, 
 -> Snowflake Pipe to automatically fetch new file-uploads
 -> RAW layer to always keep original data
 -> STAGING layer to cleanup values and validate original data's usability
--> BUSINESS layer to build meaningful views, e.g. how many unclean data was sent per day
+-> BUSINESS layer to build meaningful views, e.g. how much invalid invalid data was sent
 
 ## Packages and systems
 
