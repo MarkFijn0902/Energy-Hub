@@ -18,7 +18,7 @@ Input data was generated using ChatGPT for demonstration purposes.
 -> Snowflake Pipe to automatically fetch new file-uploads
 -> RAW layer to always keep original data
 -> STAGING layer to cleanup values and validate original data's usability
--> BUSINESS layer to build meaningful views, e.g. how much invalid invalid data was sent
+-> BUSINESS layer to build meaningful views, e.g. how much invalid data was sent
 ```
 
 ## Packages and systems
