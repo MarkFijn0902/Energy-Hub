@@ -1,11 +1,11 @@
 USE DATABASE ENERGY_HUB;
-USE SCHEMA VIEWS;
+USE SCHEMA STAGING;
 
 -- Create a staging view and cleanup data
 -- Cleanups:
 -- Trim and set first character of location to uppercase
 -- Validate on null values, high or low consumption / generation or temperatures
-CREATE OR REPLACE VIEW STAGING_VIEW AS
+CREATE  VIEW ENERGY_HUB.STAGING.STAGING_VIEW AS
 SELECT 
     READING_ID,
     METER_ID,
@@ -28,6 +28,7 @@ SELECT
         WHEN CURRENT_TEMPERATURE_C > 40 THEN 'HIGH_TEMPERATURE'
         ELSE 'VALID'
     END AS QUALITY_STATUS
-FROM ENERGY_HUB.TABLES.RAW_METER_DATA;
+FROM ENERGY_HUB.INGESTION.RAW_DATA;
 
+-- Select all to validate view is correctly created
 SELECT * FROM STAGING_VIEW;
