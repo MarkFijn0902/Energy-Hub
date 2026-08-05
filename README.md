@@ -28,12 +28,12 @@ The goal of this project is to learn about ELT / ETL pipelines and how a cloud-b
 - Snowpipe
 - SQL
 
-  ## Setup
+## Setup
 
-  AWS Credentials were set up locally, IAM roles were set in AWS and are not included in this repository.
+AWS Credentials were set up locally, IAM roles were set in AWS and are not included in this repository.
 
-  ## Limitations
+## Limitations
 
-  As I have no actual way of getting data from my own smart-meter at home, the input data is now static and has to be manually edited.
-  The Python script runs manually and is not scheduled.
-  This is purely a proof of concept / learning project and is in no means production ready.
+As I have no actual way of getting data from my own smart-meter at home, the input data is now static and has to be manually edited.
+The Python script runs manually and is not scheduled.
+This is purely a proof of concept / learning project and is in no means production ready.
