@@ -5,7 +5,7 @@ USE SCHEMA STAGING;
 -- Cleanups:
 -- Trim and set first character of location to uppercase
 -- Validate on null values, high or low consumption / generation or temperatures
-CREATE  VIEW ENERGY_HUB.STAGING.STAGING_VIEW AS
+CREATE VIEW ENERGY_HUB.STAGING.METER_READINGS AS
 SELECT 
     READING_ID,
     METER_ID,
@@ -31,4 +31,4 @@ SELECT
 FROM ENERGY_HUB.INGESTION.RAW_DATA;
 
 -- Select all to validate view is correctly created
-SELECT * FROM STAGING_VIEW;
+SELECT * FROM METER_READINGS;
