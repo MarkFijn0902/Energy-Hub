@@ -6,6 +6,7 @@ Proof-of-concept ELT pipeline for processing smart-meter data using Python, AWS 
 
 The goal of this project is to learn about ELT / ETL pipelines and how a cloud-based data warehouse can ingest data from an external source, validate and transform it to expose useful data for business operations.
 For this project, I chose to work with views in my staging and business layer, as they will automatically change when new data is added by SnowPipe. Learning and investigating how Matillion works seemed overkill for my demonstration purposes.
+Input data was generated using ChatGPT for demonstration purposes.
 
 ## Architecture
 
