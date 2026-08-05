@@ -1,5 +1,6 @@
 import pandas
 import boto3
+from datetime import datetime
 
 def main():
     # read an xlsx file, to simulate data being "sent" by a meter.
@@ -37,7 +38,9 @@ def validate_excel(excel_file):
 def upload_csv_to_s3():
     # create s3 client and upload file to Amazon S3
     s3_client = boto3.client('s3')
-    s3_client.upload_file('data/generated_meter_data.csv', 'amazon-s3-enexis-raw-data', 'raw/meter_data.csv')
+    file_name = f"raw/meter_data_{datetime.now():%Y%m%d_%H%M%S}.csv"
+
+    s3_client.upload_file('data/generated_meter_data.csv', 'amazon-s3-enexis-raw-data', file_name)
 
 if __name__ == "__main__":
     main()
